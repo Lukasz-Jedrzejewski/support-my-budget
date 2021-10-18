@@ -20,6 +20,12 @@ import java.nio.file.Paths;
 @Component
 public class Tess {
 
+    private final StringCleaner cleaner;
+
+    public Tess(StringCleaner extractorInterface) {
+        this.cleaner = extractorInterface;
+    }
+
     public String doOcr(MultipartFile file) throws IOException {
         nu.pattern.OpenCV.loadLocally();
 
@@ -57,7 +63,7 @@ public class Tess {
                 TesseractException e) {
             System.err.println(e.getMessage());
         }
-        return result;
+        return cleaner.extract(result);
     }
 
 }
