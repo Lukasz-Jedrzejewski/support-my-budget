@@ -62,6 +62,9 @@ public class Tess {
         } catch (
                 TesseractException e) {
             System.err.println(e.getMessage());
+        } finally {
+            Files.delete(path);
+            ocrImage.delete();
         }
         return cleaner.extract(result);
     }
