@@ -34,6 +34,7 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
+/src/main/resources/application.yml
 .vscode/
-#/src/main/resources/application.yml
 hs_err_pid9736.log
+
