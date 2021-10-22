@@ -38,4 +38,5 @@ build/
 hs_err_pid9736.log
 
 /src/main/resources/application.yml
+/databasechangelog.csv
 
