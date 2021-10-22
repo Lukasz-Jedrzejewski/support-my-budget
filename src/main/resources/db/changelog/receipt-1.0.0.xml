@@ -9,6 +9,9 @@
                 <constraints nullable="false" primaryKey="true" unique="true" primaryKeyName="receipt_pk"
                              uniqueConstraintName="receipt_id_uq"/>
             </column>
+            <column name="sum" type="DOUBLE">
+                <constraints nullable="true" unique="false"/>
+            </column>
             <column name="creation_date" type="timestamptz">
                 <constraints nullable="false" unique="false"/>
             </column>
